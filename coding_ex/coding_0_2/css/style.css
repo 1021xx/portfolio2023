@@ -1,0 +1,50 @@
+@import "./index.css";
+@import "./profile.css";
+@import "./main.css";
+
+:root {
+  --bg: rgba(0, 0, 0, 0.3);
+  --font-white: rgba(255, 255, 255, 0.8);
+  --btn-bg: rgba(255, 255, 255, 0.2);
+  --btn-bg-focus: rgba(255, 255, 255, 0.3);
+  --border-radius: 3px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  max-width: 320px;
+  height: 100vh;
+  color: #fff;
+  margin: 0 auto;
+  background-color: #000;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+input {
+  border: none;
+  outline: none;
+  /* appearance: none; */
+  border-radius: 3px;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+.notosanskr {
+  font-family: "Noto Sans KR", sans-serif;
+  word-break: keep-all;
+}
+.wrap {
+  height: 100%;
+  background-color: #000;
+  overflow: scroll;
+  position: relative;
+  border: 1px solid #333;
+}

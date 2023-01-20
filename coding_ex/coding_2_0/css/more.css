@@ -1,0 +1,242 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background: rosybrown;
+  font-family: "Open Sans", sans-serif;
+  color: blanchedalmond;
+}
+.material-symbols-outlined {
+  color: blanchedalmond;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+
+/* HEADER */
+.top_wrap {
+  text-align: center;
+  margin: 70px 0;
+}
+.top {
+  display: inline-block;
+  position: relative;
+}
+.top img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+.top::after {
+  content: "7";
+  font-size: 12px;
+  color: blanchedalmond;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  background-color: orangered;
+  position: absolute;
+  top: 0;
+  right: -8px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  animation: ani 0.5s ease 0.7s forwards;
+  opacity: 0;
+}
+@keyframes ani {
+  to {
+    opacity: 1;
+  }
+}
+.text p:first-child {
+  margin-top: 20px;
+  font-size: 25px;
+  animation: ani1 0.4s ease 0.4s forwards;
+  opacity: 0;
+  position: relative;
+}
+@keyframes ani1 {
+  from {
+    top: 10px;
+    color: aqua;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+.text p:nth-child(2) {
+  font-size: 11px;
+  margin-top: 5px;
+  animation: ani2 0.4s ease 0.5s forwards;
+  opacity: 0;
+  position: relative;
+}
+@keyframes ani2 {
+  from {
+    top: 10px;
+    color: aqua;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+.text p:last-child {
+  display: inline-block;
+  border: 1px solid rgba(184, 60, 60, 0.2);
+  background-color: rgba(190, 112, 112, 0.4);
+  padding: 5px 20px;
+  border-radius: 50px;
+  margin-top: 20px;
+  font-size: 11px;
+  cursor: pointer;
+  animation: ani3 0.4s ease 0.6s forwards;
+  opacity: 0;
+  position: relative;
+}
+@keyframes ani3 {
+  from {
+    top: 10px;
+    color: aqua;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+.text p:last-child:hover {
+  background-color: rgba(190, 112, 112, 0.6);
+}
+
+
+/* SECTION */
+.menu .list {
+  display: flex;
+}
+.menu .list a {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  align-items: center;
+  color: blanchedalmond;
+  opacity: 0.7;
+}
+.menu .list a:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 0.8s;
+  opacity: 1;
+}
+.menu .list span:first-child {
+  margin: 0 20px;
+}
+.menu .list span:last-child {
+  margin-left: auto;
+  padding-right: 20px;
+}
+
+
+.list:first-of-type a span {
+  animation: ani4 0.4s ease forwards;
+  opacity: 0;
+  position: relative;
+}
+@keyframes ani4 {
+  from {
+    top: 10px;
+    color: aqua;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+.list:nth-child(2) a span {
+  animation: ani4 0.4s ease 0.2s forwards;
+  opacity: 0;
+  position: relative;
+}
+@keyframes ani4 {
+  from {
+    top: 10px;
+    color: aqua;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+.list:nth-child(3) a span {
+  animation: ani4 0.4s ease 0.4s forwards;
+  opacity: 0;
+  position: relative;
+}
+@keyframes ani4 {
+  from {
+    top: 10px;
+    color: aqua;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+.list:nth-child(4) a span {
+  animation: ani4 0.4s ease 0.6s forwards;
+  opacity: 0;
+  position: relative;
+}
+@keyframes ani4 {
+  from {
+    top: 10px;
+    color: aqua;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+
+
+
+/* FOOTER */
+footer {
+  position: fixed;
+  bottom: 0;
+}
+.menu-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgb(151, 98, 98);
+}
+.menu-container .menu {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+.menu-container .menu a {
+  width: 100%;
+  height: 70px;
+  display: block;
+  justify-content: space-around;
+  text-align: center;
+  line-height: 80px;
+  opacity: 0.4;
+}
+.menu-container .menu a:nth-child(4) {
+  opacity: 1;
+}
+.menu-container .menu a:hover {
+  background: rgb(160, 104, 104);
+}

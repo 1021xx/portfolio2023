@@ -1,0 +1,123 @@
+.main-bg {
+  background-image: url(../img/main_bg.png);
+  background-repeat: no-repeat;
+  position: relative;
+  background-attachment: local;
+}
+
+/* HEADER */
+#home {
+  position: fixed;
+}
+.top-nav {
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background-color: var(--bg);
+}
+.top-nav__logo img {
+  width: 45px;
+  height: 45px;
+}
+.top-nav__right {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.top-nav__right span {
+  font-size: 25px;
+  padding: 5px;
+}
+.top-nav__right img {
+  width: 25px;
+  height: 25px;
+  border-radius: var(--border-radius);
+}
+
+/* MAIN */
+.main-nav {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 14px;
+  margin-top: 60px;
+  color: var(--font-white);
+}
+.main-title {
+  width: 300px;
+  height: 530px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 auto;
+}
+.main-tilte__genre {
+  margin-bottom: 10px;
+}
+.sub-title {
+  font-size: 10px;
+  width: 100%;
+  display: flex;
+  flex-shrink: 1;
+}
+.sub-title__icon {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.sub-title__paly {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: black;
+  border-radius: var(--border-radius);
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* SECTION */
+.section-title {
+  margin: 13px 0 0 10px;
+}
+.section-list {
+  display: flex;
+  overflow-x: auto;
+}
+.section-list li img {
+  width: 100px;
+  height: 150px;
+  margin: 5px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+.section-last {
+  margin-bottom: 60px;
+}
+
+/* nav */
+.main-nav {
+  width: 318px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  position: fixed;
+  bottom: 0;
+  font-size: 10px;
+}
+.main-nav__item {
+  width: 33.333%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.main-nav__item span:last-child {
+  padding-top: 5px;
+}

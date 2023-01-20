@@ -1,0 +1,51 @@
+.main-index {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+}
+.clock-index {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.form-index {
+  width: 300px;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.form-index input,
+.logout-home,
+.todo input {
+  background-color: transparent;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  outline: none;
+  font-weight: 900;
+  font-size: 1.6rem;
+  text-align: center;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.form-index input:focus,
+.form-index input:hover {
+  border-color: salmon;
+}
+.form-index input::placeholder {
+  color: #999;
+}
+.form-index input:focus::placeholder {
+  color: transparent;
+}
+.form-index input:last-child,
+.logout-home {
+  cursor: pointer;
+}

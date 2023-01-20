@@ -1,0 +1,12 @@
+.bg {
+  height: 100vh;
+  background-image: url(../img/main_bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+.index-menu .logo a,
+.index-menu .menu-list li a {
+  color: #fff;
+}

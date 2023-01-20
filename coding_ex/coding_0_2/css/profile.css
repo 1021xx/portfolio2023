@@ -1,0 +1,31 @@
+.proflie-title {
+  margin-top: 30px;
+  text-align: center;
+}
+.proflie-container {
+  margin-top: 80px;
+}
+.proflie {
+  width: 200px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.proflie-box {
+  width: 100%;
+  text-align: center;
+}
+.proflie-box div {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+.proflie-box div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  object-fit: cover;
+}

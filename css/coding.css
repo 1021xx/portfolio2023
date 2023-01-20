@@ -1,0 +1,111 @@
+.coding-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.coding-wrap > div {
+  flex: 1;
+  margin-right: 30px;
+  height: 400px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.co-title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* height: 50px; */
+  height: 0px;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  transition: 0.3s;
+}
+.coding-wrap > div:hover .co-title {
+  /* bottom: -50px; */
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.coding-wrap > div:last-child {
+  margin-right: 0;
+}
+.coding_iframe_box {
+  position: fixed;
+  left: 0;
+  top: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: 0.5s;
+  z-index: 999;
+}
+.coding_iframe_box.active {
+  top: 0;
+}
+.iframe_close {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 50px;
+  color: #fff;
+  z-index: 9999;
+}
+body.active {
+  overflow: hidden;
+}
+.iframe_wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 90%;
+  height: 90%;
+}
+.iframe_wrap iframe {
+  width: 100%;
+  height: 100%;
+}
+.co-wrap01 div:nth-child(1) {
+  background-image: url(../img/coding01.png);
+}
+.co-wrap01 div:nth-child(2) {
+  background-image: url(../img/coding02.png);
+}
+.co-wrap01 div:nth-child(3) {
+  background-image: url(../img/coding03.png);
+}
+.co-wrap02 div:nth-child(1) {
+  background-image: url(../img/coding04.png);
+}
+.co-wrap02 div:nth-child(2) {
+  background-image: url(../img/coding05.png);
+}
+.co-wrap02 div:nth-child(3) {
+  background-image: url(../img/coding06.png);
+}
+.co-wrap03 div:nth-child(1) {
+  background-image: url(../img/coding07.png);
+}
+.co-wrap03 div:nth-child(2) {
+  background-image: url(../img/coding08.png);
+}
+.co-wrap03 div:nth-child(3) {
+  background-image: url(../img/coding09.png);
+}
+.co-wrap04 div:nth-child(1) {
+  background-image: url(../img/coding10.png);
+}
+.co-wrap04 div:nth-child(2) {
+  background-image: url(../img/coding11.png);
+}
+.co-wrap04 div:nth-child(3) {
+  background-image: url(../img/coding12.png);
+}

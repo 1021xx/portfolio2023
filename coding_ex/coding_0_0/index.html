@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1021</title>
+    <!-- favicon -->
+    <link rel="icon" href="./favicon/1021(3).png" />
+    <!-- reset-css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="main-index">
+        <h2 id="clock" class="clock-index"></h2>
+
+        <form id="loginForm" class="hidden form-index">
+          <input type="text" class="login-index" maxlength="15" placeholder="User name" required />
+          <input type="submit" class="submitInput" onclick="pageNext()" value="👽" />
+        </form>
+
+        <h1 id="greeting" class="hidden"></h1>
+
+        <div id="weather">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/background.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/greetings.js"></script>
+  </body>
+</html>

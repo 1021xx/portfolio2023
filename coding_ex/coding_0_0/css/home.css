@@ -1,0 +1,232 @@
+/* NAV */
+nav {
+  width: 250px;
+  height: 95%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9;
+}
+.menu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  justify-content: space-between;
+}
+.user {
+  text-align: center;
+  padding: 50px 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.menu-list i {
+  margin: 10px;
+  padding: 5px;
+  padding-right: 20px;
+}
+.menu-list li:hover a {
+  display: block;
+  background: rgba(255, 255, 255, 0.03);
+  /* background: rgba(0, 0, 0, 0.03); */
+  border-radius: 40px;
+}
+.menu-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.logout-home {
+  font-size: 0.9rem;
+}
+.logout-home:hover {
+  border-color: #555;
+  color: #555;
+}
+
+/* MAIN */
+.main-home {
+  width: 80%;
+  position: absolute;
+  left: 280px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* weater */
+.today_wrap {
+  width: 420px;
+  height: 570px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 40px 20px 40px;
+}
+.today-home {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+.clock-home {
+  font-size: 1.3rem;
+  float: left;
+}
+#weather {
+  margin-left: 30px;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.weatherIcon {
+  position: absolute;
+  left: -45px;
+  top: -18px;
+}
+
+/* calendar */
+.sec_cal {
+  width: 360px;
+  padding: 20px;
+  font-family: "NotoSansR";
+}
+.sec_cal .cal_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 78px;
+}
+.sec_cal .cal_nav .year-month {
+  width: 300px;
+  text-align: center;
+  line-height: 1;
+}
+.sec_cal .cal_nav .nav {
+  display: flex;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+.sec_cal .cal_nav .go-prev,
+.sec_cal .cal_nav .go-next {
+  display: block;
+  width: 50px;
+  height: 78px;
+  font-size: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec_cal .cal_nav .go-prev::before,
+.sec_cal .cal_nav .go-next::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 3px solid #fff;
+  border-width: 3px 3px 0 0;
+  transition: border 0.1s;
+}
+.sec_cal .cal_nav .go-prev:hover::before,
+.sec_cal .cal_nav .go-next:hover::before {
+  border-color: #ed2a61;
+}
+.sec_cal .cal_nav .go-prev::before {
+  transform: rotate(-135deg);
+}
+.sec_cal .cal_nav .go-next::before {
+  transform: rotate(45deg);
+}
+.sec_cal .cal_wrap {
+  padding-top: 40px;
+  position: relative;
+  margin: 0 auto;
+}
+.sec_cal .cal_wrap .days {
+  display: flex;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #999;
+}
+.sec_cal .cal_wrap::after {
+  top: 368px;
+}
+.sec_cal .cal_wrap .day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 7);
+  text-align: left;
+  color: #ddd;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 15px;
+}
+.current.today {
+  background: rgba(255, 255, 255, 0.4);
+}
+.sec_cal .cal_wrap .dates {
+  display: flex;
+  flex-flow: wrap;
+  height: 290px;
+}
+.sec_cal .cal_wrap .day:nth-child(7n -1) {
+  color: #567eea;
+}
+.sec_cal .cal_wrap .day:nth-child(7n) {
+  color: #f44275;
+}
+.sec_cal .cal_wrap .day.disable {
+  color: #999;
+}
+
+/* todolist */
+.todo {
+  width: 400px;
+  height: 590px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.todo input:focus {
+  backdrop-filter: blur(14px) saturate(200%);
+  -webkit-backdrop-filter: blur(14px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: salmon;
+}
+.todo input:focus::placeholder {
+  color: transparent;
+}
+#todo-form {
+  padding: 40px;
+}
+#todo-form input {
+  width: 90%;
+}
+#todo-list {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-row-gap: 1rem;
+  padding-bottom: 20px;
+  overflow: scroll;
+}
+#todo-list li {
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+#todo-list button {
+  width: 10%;
+  height: 10%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+#todo-list button:hover {
+  transform: scale(1.3);
+}

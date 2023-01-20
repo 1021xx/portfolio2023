@@ -1,0 +1,225 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background: rosybrown;
+  font-family: "Open Sans", sans-serif;
+  color: blanchedalmond;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.material-symbols-outlined {
+  color: blanchedalmond;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+html {
+  overflow: hidden;
+}
+
+/* HEADER */
+.top {
+  width: 100%;
+  height: 310px;
+  background-image: url(../img/issue-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  /* font-weight: 300; */
+}
+.top .logo {
+  align-self: flex-start;
+  order: 2;
+  margin: 25px 25px 0 0;
+  font-size: 30px;
+}
+.top .wrap {
+  align-self: flex-end;
+  order: 1;
+  margin: 0 0 40px 30px;
+}
+.wrap .text p:first-child {
+  font-size: 34px;
+  font-weight: 300;
+  padding-bottom: 10px;
+  animation: ani1 0.5s ease-in-out forwards;
+  position: relative;
+}
+@keyframes ani1 {
+  from {
+    opacity: 0;
+    top: 15px;
+    color: aqua;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+.wrap .text p:first-child sup {
+  font-size: 10px;
+  padding-left: 5px;
+}
+.wrap .text p:last-child {
+  font-size: 12px;
+  animation: ani2 0.4s ease-in-out 0.15s forwards;
+  position: relative;
+  opacity: 0;
+}
+@keyframes ani2 {
+  from {
+    top: 10px;
+    color: aqua;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+/* NAV */
+.img-container {
+  display: flex;
+  width: 100%;
+  /* max-width: 800px; */
+  height: 150px;
+  position: relative;
+  animation: ani3 0.4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  opacity: 0;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+.img-container li {
+  flex: 1 0 136px;
+  /* width: 136px; */
+}
+@keyframes ani3 {
+  from {
+    transform: scaleX(2);
+    color: aqua;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+.img {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 136px;
+  height: 80px;
+  margin: 20px 0 20px 20px;
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SECTION */
+.main-container {
+  width: 100%;
+  height: 400px;
+}
+.main {
+  animation: ani4 0.5s ease-in-out forwards;
+  position: relative;
+  opacity: 0;
+}
+@keyframes ani4 {
+  from {
+    top: 5px;
+    color: aqua;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.main {
+  width: 95%;
+  height: 70px;
+  display: inline-block;
+  align-content: center;
+  margin-top: 30px;
+  justify-content: center;
+}
+.main a {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  color: blanchedalmond;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  box-sizing: border-box;
+}
+.main a:hover {
+  background: rgba(137, 104, 104, 0.3);
+  transition: all 0.5s;
+}
+.main a:first-child::before {
+  content: "\2776";
+  font-size: 30px;
+  padding-top: 15px;
+}
+.main a:nth-of-type(2)::before {
+  content: "\2777";
+  font-size: 30px;
+  padding-top: 15px;
+}
+.main a:last-of-type::before {
+  content: "\2778";
+  font-size: 30px;
+  padding-top: 15px;
+}
+.main a .b {
+  padding-left: 20px;
+  font-size: 18px;
+  font-weight: 350;
+}
+.main a .b p:last-child {
+  font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+  position: fixed;
+  bottom: 0;
+}
+.menu-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgb(151, 98, 98);
+}
+.menu-container .menu {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+.menu-container .menu a {
+  width: 100%;
+  height: 70px;
+  display: block;
+  justify-content: space-around;
+  text-align: center;
+  line-height: 80px;
+  opacity: 0.4;
+}
+.menu-container .menu a:nth-child(2) {
+  opacity: 1;
+}
+.menu-container .menu a:hover {
+  background: rgb(160, 104, 104);
+}

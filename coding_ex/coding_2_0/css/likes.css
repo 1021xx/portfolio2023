@@ -1,0 +1,225 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background: rosybrown;
+  font-family: "Open Sans", sans-serif;
+  color: blanchedalmond;
+}
+.material-symbols-outlined {
+  color: blanchedalmond;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+
+/* HEADER */
+.search {
+  margin: 20px;
+  position: relative;
+  animation: ani .6s ease-in-out 0.6s forwards;
+  opacity: 0;
+}
+@keyframes ani {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0; 
+    opacity: 1;
+  }
+}
+.search .material-symbols-outlined {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+}
+.search .search-text {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 0.4;
+  background-color: #333;
+  border: none;
+  display: inline;
+  color: antiquewhite;
+  font-size: 14px;
+  transition: all .5s;
+}
+.search .search-text:focus {
+  transition: all .5s;
+  position: relative;
+  width: 90%;
+}
+.search .search-submit {
+  background: none;
+  border: none;
+  color: antiquewhite;
+  font-size: 16px;
+  cursor: pointer;
+  display: none;
+  width: 10%;
+  text-align: center;
+}
+.search .search-text:focus ~ .search-submit {
+  transition: 0.5s;
+  animation: ani1 .6s ease forwards;
+  display: block;
+}
+@keyframes ani1 {
+  from {
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
+  to {
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
+}
+
+
+
+/* SECTION */
+.inner {
+  width: 100%;
+  /* height: 750px; */
+  margin: 0 auto;
+  /* border: 1px solid; */
+}
+.text {
+  margin-top: 100px;
+  padding: 25px 30px;
+}
+.text h2 {
+  font-weight: 100;
+  font-size: 30px;
+  animation: ani3 0.5s ease-in-out forwards;
+  position: relative;
+  opacity: 0;
+}
+@keyframes ani3 {
+  from {
+    top: 10px;
+    color: aqua;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.text p {
+  padding-top: 10px;
+  font-size: 11px;
+  animation: ani4 0.5s ease-in-out 0.1s forwards;
+  position: relative;
+  opacity: 0;
+}
+@keyframes ani4 {
+  from {
+    top: 10px;
+    color: aqua;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+table {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 15px 0 15px;
+}
+table tr td {
+  border: 8px solid transparent;
+}
+table tr td img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+table tr:first-child td:first-child {
+  animation: ani5 0.5s ease-in-out 0.1s forwards;
+  position: relative;
+  opacity: 0;
+}
+@keyframes ani5 {
+  to {
+    opacity: 1;
+  }
+}
+table tr:first-child td:last-child {
+  animation: ani5 0.5s ease-in-out 0.2s forwards;
+  position: relative;
+  opacity: 0;
+}
+@keyframes ani5 {
+  to {
+    opacity: 1;
+  }
+}
+table tr:last-child td:first-child {
+  animation: ani5 0.5s ease-in-out 0.3s forwards;
+  position: relative;
+  opacity: 0;
+}
+@keyframes ani5 {
+  to {
+    opacity: 1;
+  }
+}
+table tr:last-child td:last-child {
+  animation: ani5 0.5s ease-in-out 0.4s forwards;
+  position: relative;
+  opacity: 0;
+}
+@keyframes ani5 {
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/* FOOTER */
+footer {
+  position: fixed;
+  bottom: 0;
+}
+.menu-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgb(151, 98, 98);
+}
+.menu-container .menu {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+.menu-container .menu a {
+  width: 100%;
+  height: 70px;
+  display: block;
+  justify-content: space-around;
+  text-align: center;
+  line-height: 80px;
+  opacity: 0.4;
+}
+.menu-container .menu a:nth-child(3) {
+  opacity: 1;
+}
+.menu-container .menu a:hover {
+  background: rgb(160, 104, 104);
+}

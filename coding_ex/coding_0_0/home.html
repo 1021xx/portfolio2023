@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOME</title>
+  <!-- favicon -->
+  <link rel="icon" href="./favicon/1021(3).png">
+  <!-- reset-css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/c76f6c2692.js" ; crossorigin="anonymous"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- google jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- NAV -->
+    <nav class="inner bg-n">
+      <div class="menu">
+        <div class="menu-top">
+          <h1 id="greeting" class="hidden user"></h1>
+          <ul class="menu-list">
+            <li><a href="#"><i class="fa-solid fa-house"></i><span>HOME</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-hand-sparkles"></i><span>ABOUT</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-code"></i><span>WORK</span></a></li>
+            <li><a href="#"><i class="fa-regular fa-folder"></i><span>FOLDER</span></a></li>
+            <li><a href="#"><i class="fa-regular fa-comment"></i><span>CONTECT</span></a></li>
+          </ul>
+        </div>
+        <div class="menu-bottom">
+          <input type="button" value="Logout" onclick="pagePrev()" class="logout-home" />
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="inner">
+      <div class="main-home">
+
+        <div class="today_wrap bg-n">
+          <div class="today-home">
+            <div class="clock-home">
+              <h2 id="clock">00:00:00</h2>
+            </div>
+
+            <div id="weather">
+              <span class="weatherInfo"></span>
+              <img class="weatherIcon">
+            </div>
+          </div>
+
+          <div class="sec_cal bg-d">
+            <div class="cal_nav">
+              <a href="javascript:;" class="nav-btn go-prev">prev</a>
+              <div class="year-month"></div>
+              <a href="javascript:;" class="nav-btn go-next">next</a>
+            </div>
+            <div class="cal_wrap">
+              <div class="days">
+                <div class="day">MON</div>
+                <div class="day">TUE</div>
+                <div class="day">WED</div>
+                <div class="day">THU</div>
+                <div class="day">FRI</div>
+                <div class="day">SAT</div>
+                <div class="day">SUN</div>
+              </div>
+              <div class="dates"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="todo bg-n">
+          <form id="todo-form">
+            <input type="text" placeholder="Today.." maxlength="20" required />
+          </form>
+          <ul id="todo-list"></ul>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <script src="js/greetings.js"></script>
+  <script src="js/calendar.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/todo.js"></script>
+  <script src="js/weater.js"></script>
+</body>
+
+</html>
