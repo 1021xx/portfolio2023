@@ -13,14 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     <!-- reset css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
-
     <link rel="stylesheet" href="./css/style.css" />
 
-    <!-----js----->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <!--masonry plug-in-->
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!--skill circle plug-in-->
+    <script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.2/dist/circle-progress.js"></script>
+    <!-- masonry plugin -->
     <script src="./js/masonry.pkgd.min.js"></script>
     <!-- lightbox plugin -->
     <script src="./js/lightbox.min.js"></script>
@@ -28,7 +27,7 @@
   </head>
 
   <body>
-    <!-- <div class="wrap"> -->
+    <div class="wrap">
       <!-- MENU -->
       <nav class="nav">
         <div class="design-menu menu inner roboto">
@@ -44,6 +43,7 @@
 
       <div id="container" class="section-inner inner">
         <h1 class="title">design</h1>
+
         <div id="design_outline">
           <div class="grid">
             <div class="grid-item">
@@ -179,22 +179,13 @@
           },
           1500
         );
-        /*masonry plug-in*/
         $(".grid").masonry({
           ercentPosition: true,
           itemSelector: ".grid-item",
           gutter: 10,
         });
-        /*light box plug-in*/
         lightbox.option({
-          ShowNavOnTouchDevices: true,
           resizeDuration: 200,
-        });
-      });
-      $(window).load(function(){
-        var $container = $('.grid');
-        $container.masonry({
-        itemSelector: '.grid-item'
         });
       });
     </script>

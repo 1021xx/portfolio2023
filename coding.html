@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="./css/lightbox.css" />
 
     <!-- js -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <!--masonry plugin-->
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!--skill circle plug-in-->
+    <script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.2/dist/circle-progress.js"></script>
+    <!-- masonry plugin -->
     <script src="./js/masonry.pkgd.min.js"></script>
     <!-- lightbox plugin -->
     <script src="./js/lightbox.min.js"></script>
@@ -99,25 +99,25 @@
       <div class="coding_iframe_box">
         <a href="#" class="iframe_close">ⓧ</a>
         <section class="iframe_wrap">
-          <iframe src="./coding_ex/coding_0_0/index.html" frameborder="0" target="_blank"></iframe>
+          <iframe src="./coding_ex/coding_0_0/index.html" frameborder="0"></iframe>
         </section>
       </div>
-
-      <script>
-        $(document).ready(function () {
-          $(".coding-wrap > div").click(function () {
-            const c = $(this).parent(".coding-wrap").index();
-            const r = $(this).index();
-            $("body").addClass("active");
-            $(".coding_iframe_box").addClass("active");
-            $(".iframe_wrap iframe").attr({ src: "./coding_ex/coding_" + c + "_" + r + "/index.html" });
-          });
-          $(".iframe_close").click(function () {
-            $("body").removeClass("active");
-            $(".coding_iframe_box").removeClass("active");
-          });
-        });
-      </script>
     </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".coding-wrap > div").click(function () {
+          var c = $(this).parent(".coding-wrap").index();
+          var r = $(this).index();
+          $("body").addClass("active");
+          $(".coding_iframe_box").addClass("active");
+          $(".iframe_wrap iframe").attr({ src: "./coding_ex/coding_" + c + "_" + r + "/index.html" });
+        });
+        $(".iframe_close").click(function () {
+          $("body").removeClass("active");
+          $(".coding_iframe_box").removeClass("active");
+        });
+      });
+    </script>
   </body>
 </html>
