@@ -10,3 +10,6 @@
 .index-menu .menu-list li a {
   color: #fff;
 }
+.index-menu .menu-list li:hover {
+  color: #f2f2f2;
+}

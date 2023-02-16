@@ -10,9 +10,15 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- reset css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/lightbox.css" />
 
@@ -34,7 +40,7 @@
         <div class="coding-menu menu inner roboto">
           <div class="logo"><a href="index.html">1021.</a></div>
           <ul class="menu-list">
-            <li><a href="about.html">about</a></li>
+            <!-- <li><a href="about.html">about</a></li> -->
             <li><a href="publishing.html">publishing</a></li>
             <li class="line"><a href="coding.html">coding example</a></li>
             <li><a href="design.html">design</a></li>
@@ -49,7 +55,9 @@
           <div id="coding_outline">
             <div class="coding-wrap co-wrap01">
               <div>
-                <article class="co-title">Vanilla JS Function Responsive</article>
+                <article class="co-title">
+                  Vanilla JS Function Responsive
+                </article>
               </div>
               <div>
                 <article class="co-title">Vanilla JS Random</article>
@@ -99,7 +107,10 @@
       <div class="coding_iframe_box">
         <a href="#" class="iframe_close">ⓧ</a>
         <section class="iframe_wrap">
-          <iframe src="./coding_ex/coding_0_0/index.html" frameborder="0"></iframe>
+          <iframe
+            src="./coding_ex/coding_0_0/index.html"
+            frameborder="0"
+          ></iframe>
         </section>
       </div>
     </div>
@@ -111,7 +122,9 @@
           var r = $(this).index();
           $("body").addClass("active");
           $(".coding_iframe_box").addClass("active");
-          $(".iframe_wrap iframe").attr({ src: "./coding_ex/coding_" + c + "_" + r + "/index.html" });
+          $(".iframe_wrap iframe").attr({
+            src: "./coding_ex/coding_" + c + "_" + r + "/index.html",
+          });
         });
         $(".iframe_close").click(function () {
           $("body").removeClass("active");
