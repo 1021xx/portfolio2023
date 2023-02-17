@@ -4,6 +4,10 @@
   padding: 20px 0;
   border-bottom: 1px solid #ccc;
 }
+.publishing-title__photo {
+  display: flex;
+  align-items: center;
+}
 .publishing-title__photo img {
   width: 600px;
   object-fit: cover;
