@@ -1,0 +1,8 @@
+#ui .publishing-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#ui .publishing-content a {
+  font-size: 18px;
+}
