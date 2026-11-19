@@ -20,8 +20,6 @@
 
   <!-- js -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <!--skill circle plug-in-->
-  <script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.2/dist/circle-progress.js"></script>
   <!-- masonry plugin -->
   <script src="./js/masonry.pkgd.min.js"></script>
   <!-- lightbox plugin -->
@@ -52,7 +50,7 @@
         <div class="grid">
           <div class="grid-item">
             <a href="./img/design01.png" data-lightbox="design">
-              <img src="./img/design01.png" />
+              <img src="./img/design01.png" width="1920" height="920" />
               <section class="glass">
                 <article class="design_title">
                   <span>네온사인</span>
@@ -64,7 +62,7 @@
 
           <div class="grid-item">
             <a href="./img/design02.png" data-lightbox="design">
-              <img src="./img/design02.png" />
+              <img src="./img/design02.png" width="1920" height="1280" />
               <section class="glass">
                 <article class="design_title">
                   <span>합성</span>
@@ -76,7 +74,7 @@
 
           <div class="grid-item">
             <a href="./img/design03.png" data-lightbox="design">
-              <img src="./img/design03.png" />
+              <img src="./img/design03.png" width="2833" height="2106" />
               <section class="glass">
                 <article class="design_title">
                   <span>타이포그래픽</span>
@@ -88,7 +86,7 @@
 
           <div class="grid-item">
             <a href="./img/design04.png" data-lightbox="design">
-              <img src="./img/design04.png" />
+              <img src="./img/design04.png" width="1080" height="1080" />
               <section class="glass">
                 <article class="design_title">
                   <span>3D 아이콘</span>
@@ -100,7 +98,7 @@
 
           <div class="grid-item">
             <a href="./img/design05.png" data-lightbox="design">
-              <img src="./img/design05.png" />
+              <img src="./img/design05.png" width="1776" height="975" />
               <section class="glass">
                 <article class="design_title">
                   <span>2D ▸ 3D</span>
@@ -112,7 +110,7 @@
 
           <div class="grid-item">
             <a href="./img/design09.png" data-lightbox="design">
-              <img src="./img/design09.png" />
+              <img src="./img/design09.png" width="1082" height="1082" />
               <section class="glass">
                 <article class="design_title">
                   <span>3D</span>
@@ -124,7 +122,7 @@
 
           <div class="grid-item">
             <a href="./img/design07.png" data-lightbox="design">
-              <img src="./img/design07.png" />
+              <img src="./img/design07.png" width="1046" height="1046" />
               <section class="glass">
                 <article class="design_title">
                   <span>3D Chrome</span>
@@ -136,7 +134,7 @@
 
           <div class="grid-item">
             <a href="./img/design10.png" data-lightbox="design">
-              <img src="./img/design10.png" />
+              <img src="./img/design10.png" width="857" height="788" />
               <section class="glass">
                 <article class="design_title">
                   <span>3D 타이포그래픽</span>
@@ -148,7 +146,7 @@
 
           <div class="grid-item">
             <a href="./img/design08.png" data-lightbox="design">
-              <img src="./img/design08.png" />
+              <img src="./img/design08.png" width="3612" height="2542" />
               <section class="glass">
                 <article class="design_title">
                   <span>Glass Card</span>
@@ -160,7 +158,7 @@
 
           <div class="grid-item">
             <a href="./img/design06.png" data-lightbox="design">
-              <img src="./img/design06.png" />
+              <img src="./img/design06.png" width="5705" height="934" />
               <section class="glass">
                 <article class="design_title">
                   <span>Glass</span>
@@ -176,14 +174,7 @@
 
   <script>
     $(document).ready(function () {
-      $("#design_outline").stop().animate({
-          opacity: 1,
-          marginTop: 0,
-        },
-        1500
-      );
       $(".grid").masonry({
-        ercentPosition: true,
         itemSelector: ".grid-item",
         gutter: 10,
       });

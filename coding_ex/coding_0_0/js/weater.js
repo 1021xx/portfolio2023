@@ -1,47 +1,60 @@
-const API_KEY = "4b13b762c48586b10ef3ab0019b394ed"
-const COORDS = 'coords';
+(() => {
+  const weatherInfo = document.querySelector(".weatherInfo");
+  const weatherIcon = document.querySelector(".weatherIcon");
+  const weatherSource = document.querySelector(".weather-source");
 
-const weatherInfo = document.querySelector('.weatherInfo');
-const weatherIconImg = document.querySelector('.weatherIcon');
+  const conditions = [
+    [[0], "Clear", "☀️"],
+    [[1, 2], "Partly cloudy", "⛅"],
+    [[3], "Overcast", "☁️"],
+    [[45, 48], "Fog", "🌫️"],
+    [[51, 53, 55], "Drizzle", "🌦️"],
+    [[56, 57], "Freezing drizzle", "🌧️"],
+    [[61, 63, 65, 80, 81, 82], "Rain", "🌧️"],
+    [[66, 67], "Freezing rain", "🌧️"],
+    [[71, 73, 75, 77, 85, 86], "Snow", "🌨️"],
+    [[95, 96, 99], "Thunderstorm", "⛈️"],
+  ];
 
-function init() {
-  askForCoords();
-}
+  function showUnavailable() {
+    weatherInfo.textContent = "Weather unavailable";
+  }
 
-function askForCoords() {
-  navigator.geolocation.getCurrentPosition(handleSuccess, handleError);
-}
+  async function showWeather({ coords }) {
+    const url = new URL("https://api.open-meteo.com/v1/forecast");
+    url.search = new URLSearchParams({
+      latitude: coords.latitude,
+      longitude: coords.longitude,
+      current: "temperature_2m,weather_code,is_day",
+      forecast_days: "1",
+    });
 
-function handleSuccess(position) {
-  const latitude = position.coords.latitude;
-  const longitude = position.coords.longitude;
-  const coordsObj = {
-    latitude,
-    longitude
-  };
-  getWeather(latitude, longitude);
-}
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        showUnavailable();
+        return;
+      }
 
-function handleError() {
-  console.log("can't not access to location");
-}
+      const { current } = await response.json();
+      if (!Number.isFinite(current?.temperature_2m)) {
+        showUnavailable();
+        return;
+      }
 
-function getWeather(lat, lon) {
-  fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`)
-  .then(function (response) {
-    return response.json();
-  })
-    .then(function (json) {
-      const temperature = json.main.temp;
-      const place = json.name;
-      const weatherDescription = json.weather[0].description;
-      const weatherIcon = json.weather[0].icon;
-      const weatherIconAdrs = `http://openweathermap.org/img/wn/${weatherIcon}.png`;
+      const condition = conditions.find(([codes]) => codes.includes(current.weather_code));
+      const [, description, icon] = condition ?? [[], "Current weather", ""];
+      weatherIcon.textContent = current.weather_code === 0 && current.is_day === 0 ? "🌙" : icon;
+      weatherInfo.textContent = `${description}, ${Math.round(current.temperature_2m)}°C`;
+      weatherSource.hidden = false;
+    } catch {
+      showUnavailable();
+    }
+  }
 
-      weatherInfo.innerText = `${weatherDescription}, ${place} ${Math.round(temperature)}°C`;
-      weatherIconImg.setAttribute('src', weatherIconAdrs);
-    })
-    .catch((error) => console.log("error:", error));
-}
-
-init();
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showWeather, showUnavailable, { timeout: 10000 });
+  } else {
+    showUnavailable();
+  }
+})();
